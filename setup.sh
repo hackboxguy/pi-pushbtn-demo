@@ -19,6 +19,7 @@ echo "KEY_DOWN    0   /home/pi/pi-pushbtn-demo/key-pressed-down.sh" >> /etc/trig
 test 0 -eq $? && echo "[OK]" || echo "[FAIL]"
 
 printf "updating /etc/systemd/system/multi-user.target.wants/triggerhappy.service... "
-sed -i 's/nobody/pi/g' /etc/systemd/system/multi-user.target.wants/triggerhappy.service
+#sed -i 's/nobody/pi/g' /etc/systemd/system/multi-user.target.wants/triggerhappy.service
+sed -i 's/nobody/pi/g' /lib/systemd/system/triggerhappy.service
 test 0 -eq $? && echo "[OK]" || echo "[FAIL]"
-printf "pi-pushbtn-demo has been installed successfully, reboot raspi............... "
+printf "pi-pushbtn-demo has been installed successfully, reboot raspi............... \n"
