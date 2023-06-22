@@ -20,8 +20,8 @@ A Rugged Metal Push-Button has a built in LED-ring which can be controlled throu
 1. ```sudo reboot```
 1. After raspi-reboot, push the buttons and see that its LED blinks and the state of the ACT-LED of Raspberry-PI changes its state
 
-## How to extend this demo to trigger different firmware flashing on wemos-d1-mini?
-After following all 11 steps as documented above, you could just overwrite key-pressed-down.sh and key-pressed-up.sh with flash-esp-1hz.sh and flash-esp-4hz.sh as shown below
+## How to extend this demo to trigger different firmware flashing on wemos-d1-mini based on the button-pressed?
+After following all **11** steps as documented above, you could just overwrite **key-pressed-down.sh** and **key-pressed-up.sh** with **flash-esp-1hz.sh** and **flash-esp-4hz.sh** as shown below
 ```
 cp /home/pi/pi-pushbtn-demo/flash-esp-1hz.bin /home/pi/pi-pushbtn-demo/key-pressed-down.sh
 cp /home/pi/pi-pushbtn-demo/flash-esp-4hz.bin /home/pi/pi-pushbtn-demo/key-pressed-up.sh
