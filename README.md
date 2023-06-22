@@ -23,8 +23,8 @@ A Rugged Metal Push-Button has a built in LED-ring which can be controlled throu
 ## How to extend this demo to trigger different firmware flashing on wemos-d1-mini based on the button-pressed?
 After following all **11** steps as documented above, you could just overwrite **key-pressed-down.sh** and **key-pressed-up.sh** with **flash-esp-1hz.sh** and **flash-esp-4hz.sh** as shown below
 ```
-cp /home/pi/pi-pushbtn-demo/flash-esp-1hz.bin /home/pi/pi-pushbtn-demo/key-pressed-down.sh
-cp /home/pi/pi-pushbtn-demo/flash-esp-4hz.bin /home/pi/pi-pushbtn-demo/key-pressed-up.sh
+cp /home/pi/pi-pushbtn-demo/flash-esp-1hz.sh /home/pi/pi-pushbtn-demo/key-pressed-down.sh
+cp /home/pi/pi-pushbtn-demo/flash-esp-4hz.sh /home/pi/pi-pushbtn-demo/key-pressed-up.sh
 ``` 
 Connect the wemos-d1-mini to USB port of raspberry-PI and push one of the buttons and notice that the flashing of wemos-d1-mini starts, and after flashing the firmware, blue LED on wemos-d1-mini would blink at different rate depending on the button which was pressed
 
