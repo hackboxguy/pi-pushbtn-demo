@@ -13,13 +13,22 @@ A Rugged Metal Push-Button has a built in LED-ring which can be controlled throu
 1. Using Ctrl+Shift+x, open advanced options menu on Raspberry-Pi-Imager, and set the user/pw/timezone/hostname/ssh-enable
 1. Insert the sdcard and boot the raspberry pi by connecting it to local dhcp-server network
 1. ssh to raspberry pi using ```ssh pi@my-raspi-001```
-1. ```sudo apt-get install -y git```
+1. ```sudo apt-get install -y git esptool```
 1. ```git clone https://github.com/hackboxguy/pi-pushbtn-demo.git```
 1. ```cd pi-pushbtn-demo```
 1. ```sudo ./setup.sh```
 1. ```sudo reboot```
-1. After raspi-reboot, push the button and see that its LED blinks
+1. After raspi-reboot, push the buttons and see that its LED blinks and the state of the ACT-LED of Raspberry-PI changes its state
 
+## How to extend this demo to trigger different firmware flashing on wemos-d1-mini?
+After following all 11 steps as documented above, you could just overwrite key-pressed-down.sh and key-pressed-up.sh with flash-esp-1hz.sh and flash-esp-4hz.sh as shown below
+```
+cp /home/pi/pi-pushbtn-demo/flash-esp-1hz.bin /home/pi/pi-pushbtn-demo/key-pressed-down.sh
+cp /home/pi/pi-pushbtn-demo/flash-esp-4hz.bin /home/pi/pi-pushbtn-demo/key-pressed-up.sh
+``` 
+Connect the wemos-d1-mini to USB port of raspberry-PI and push one of the buttons and notice that the flashing of wemos-d1-mini starts, and after flashing the firmware, blue LED on wemos-d1-mini would blink at different rate depending on the button which was pressed
+
+![wemos-d1-mini-setup.](/images/wemos-d1-mini-setup.jpg "wemos-d1-mini-setup.")
 
 ## Links
 
