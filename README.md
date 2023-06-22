@@ -23,4 +23,4 @@ A Rugged Metal Push-Button has a built in LED-ring which can be controlled throu
 
 ## Links
 
-Details Insturctions can be found my [Blog](http://albert-david.blogspot.com/2023/06/interfacing-rugged-metal-push-button.html).
+Detailed Insturctions can be found at my [Blog](http://albert-david.blogspot.com/2023/06/interfacing-rugged-metal-push-button.html).
